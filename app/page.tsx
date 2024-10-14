@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Users, Music, Gift } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -52,6 +53,9 @@ export default function Home() {
 
         <section id="about" className="py-12 md:py-20">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="flex justify-center mb-8">
+              <Image src='./julia.jpeg' width={250} height={500} alt="Julia d'Aulnis" className="drop-shadow-lg" />
+            </div>
             <h3 className="text-3xl font-semibold text-purple-900 mb-4">About Julia</h3>
             <p className="text-lg text-purple-700 mb-6">
               Julia d'Aulnis has years of experience in developing creative events. With background in Hospitality Management she worked her way up to restaurant manager. During the Covid Pandemic, she switched to developing online experiences. Afterwards, she started her own company doing offline events: for teams, companies and private clients.
