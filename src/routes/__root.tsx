@@ -13,11 +13,11 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: "Julia d'Aulnis Beheer",
+        title: "Julia d'Aulnis",
       },
       {
         name: 'description',
-        content: "Julia d'Aulnis Beheer - Julia krijgt het voor elkaar.",
+        content: "Julia d'Aulnis - Julia krijgt het voor elkaar.",
       },
     ],
     links: [{ rel: 'stylesheet', href: styles }],
