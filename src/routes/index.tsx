@@ -13,11 +13,22 @@ function Home() {
       <section className="relative mx-auto flex min-h-screen w-full max-w-6xl items-center px-6 py-12 sm:px-10">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-[2.5rem] border border-white/80 bg-stone-100 shadow-2xl shadow-stone-300/40">
-            <img
-              src="/julia.jpeg"
-              alt="Julia d'Aulnis"
-              className="h-full w-full object-cover"
-            />
+            <picture className="block h-full w-full">
+              <source
+                type="image/webp"
+                srcSet="/images/julia-480.webp 480w, /images/julia-768.webp 768w, /images/julia-1152.webp 1152w"
+                sizes="(min-width: 640px) 384px, calc(100vw - 48px)"
+              />
+              <img
+                src="/images/julia-768.jpeg"
+                srcSet="/images/julia-480.jpeg 480w, /images/julia-768.jpeg 768w, /images/julia-1152.jpeg 1152w"
+                sizes="(min-width: 640px) 384px, calc(100vw - 48px)"
+                alt="Julia d'Aulnis"
+                className="h-full w-full object-cover"
+                decoding="async"
+                fetchPriority="high"
+              />
+            </picture>
             <div className="absolute inset-0 bg-linear-to-t from-stone-950/20 via-transparent to-white/10" />
           </div>
 
@@ -27,7 +38,7 @@ function Home() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-8 text-stone-600">
-              Events, hospitality & spellen op maat
+              Events, hospitality & spellen op maat.
             </p>
 
             <div className="mt-10 rounded-4xl border border-white/80 bg-white/75 p-6 shadow-xl shadow-stone-300/30 backdrop-blur">

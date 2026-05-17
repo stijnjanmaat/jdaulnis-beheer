@@ -15,6 +15,9 @@
 /.vinxi/
 /dist/
 
+# generated assets
+/public/images/
+
 # production
 /build
 

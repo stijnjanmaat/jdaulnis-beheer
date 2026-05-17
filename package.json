@@ -5,8 +5,9 @@
   "type": "module",
   "packageManager": "bun@1.3.11",
   "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
+    "dev": "bun run images:build && vite dev",
+    "build": "bun run images:build && vite build",
+    "images:build": "bun scripts/build-images.ts",
     "start": "node .output/server/index.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
@@ -28,6 +29,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.13"
