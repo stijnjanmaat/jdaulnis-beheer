@@ -8,9 +8,12 @@
 # testing
 /coverage
 
-# next.js
+# framework output
 /.next/
 /out/
+/.output/
+/.vinxi/
+/dist/
 
 # production
 /build
